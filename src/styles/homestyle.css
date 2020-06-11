@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+a:visited, a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.img {
+  background-image: url("../img/ohtilly-F9uaJFH_j7Q-unsplash.jpg");
+  background-size: 1200px 600px;
+  width: 1200px;
+  height: 600px;
+  border: 3px solid #e95464;
+}
+
+body {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+span {
+  color: #e95464;
+  font-size: 70px;
+  margin-top: 100px;
+}
+
+.cartcontainer {
+  width: 1200px;
+  padding: 10px 0 0 60px;
+}
+
+.doughcon {
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.imgcon {
+  background: #f5f5f5;
+  height: 200px;
+  padding: 2px;
+}
+
+.doughimg {
+  width: 180px;
+  height: 180px;
+}
+
+.doughname {
+  font-size: 20px;
+}
+
+.icon {
+  margin: 0;
+  padding: 15px 10px 0 0;
+}
