@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 ol {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  background: #ff6347;
+}
+
+li {
+  font-family: 'Sriracha', cursive;
+  color: white;
+  font-size: 25px;
 }
