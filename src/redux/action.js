@@ -1,8 +1,14 @@
-const handleSubmit = id => (
+
+export const incrementInCart = id => (
   {
-    type: 'addtoCart',
-    payload: id,
+    type: 'increment',
+    payload: id
   }
 );
 
-export default {handleSubmit};
+export const decrementInCart = id => (
+  {
+    type: 'decrement',
+    payload: id
+  }
+)

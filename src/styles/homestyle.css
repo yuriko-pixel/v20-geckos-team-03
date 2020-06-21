@@ -33,6 +33,27 @@ span {
   margin-top: 100px;
 }
 
+.container1 {
+  padding-left: 100px;
+}
+
+.gotocart {
+  font-size: 25px;
+}
+
+.gotocartcon {
+  height: 50px;
+  margin:  0 auto;
+}
+
+span {
+  margin: 0;
+}
+
+.arrow {
+  padding-top: 5px;
+}
+
 .carttitle {
   font-family: 'Sriracha', cursive;
   background: #ff6347;
@@ -50,20 +71,16 @@ span {
 }
 
 .iconcon{
-  padding: 10px 0 0 50px;
+  padding: 10px 0 0 80px;
 }
 
 .doughcon {
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   padding: 5px;
   margin: 5px;
   background: white;
   box-shadow: 2px 2px 4px grey;
-}
-
-.doughcon:hover {
-  opacity: 0.9;
 }
 
 .imgcon {
@@ -81,11 +98,32 @@ span {
   font-size: 20px;
 }
 
-.icon {
-  margin: 0;
-  padding-right: 5px;
+.cartNum {
+  margin: 0 auto;
+  color: #696969;
 }
 
-.material-icons:hover {
+.cartchange {
+  margin: 0;
+  padding: 0 20px;
+  width: 15px;
+  font-size: 30px;
+  background: #e6e6fa;
+  border: gray;
+}
+
+.cartsum {
+  margin: 0;
+  width: 30px;
+  background: #f5f5f5;
+  border: 1px solid gray;
+  font-size: 30px;
+}
+
+.left {
+  margin-left: 85px;
+}
+
+button:hover {
   cursor: pointer;
 }

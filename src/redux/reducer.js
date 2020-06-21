@@ -16,23 +16,23 @@ const initState = [
 
 const CartReducer = (state = initState, action)=> {
   switch(action.type) {
-    case 'incrementInCart':
-        let newData = [...state];
-        let item = state.find( id => {
-          return id === state.id
-        })
-        item.inCartSum++;
-        newData[action.id] = item;
-        return newData;
+    case 'increment':
+      let newData = [...state];
+      let item = newData.find(doughnut => {
+        return doughnut.id == action.payload
+      })
+      item.inCartSum++;
+      newData[action.payload] = item;
+      return newData;
 
-    case 'decrementInCart': 
-        let newData1 = [...state];
-        let item1 = state.find( id => {
-          return id === state.id
-        })
-        item1.inCartSum--;
-        newData1[action.id] = item1;
-        return newData;
+    case 'decrement': 
+      let newData1 = [...state];
+      let item1 = newData1.find(doughnut => {
+        return doughnut.id == action.payload
+      })
+      item1.inCartSum--;
+      newData1[action.payload] = item1;
+      return newData1;
     default: 
         return state;
   }

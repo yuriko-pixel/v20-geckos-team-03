@@ -2,11 +2,16 @@ import React from 'react';
 import Layout from './Layout'
 import {Link} from 'react-router-dom'
 import homestyle from '../styles/homestyle.css'
-import store from '../redux/store'
+import {incrementInCart, decrementInCart }from '../redux/action'
+import { useDispatch, useSelector } from "react-redux";
 
-const Home = ()=> {
-  const doughnut = store.getState();
-  console.log(doughnut);
+
+const item = state => state;
+
+const Home = props => {
+  const doughnut = useSelector(item);
+  const dispatch = useDispatch();
+
     return (
       <Layout>
           <div className="container">
@@ -15,7 +20,12 @@ const Home = ()=> {
             </div>
             <p className="carttitle">Doughnut Collections</p>
             <div className="cartcontainer">
-              <div className="flex">
+              <div className="gotocartcon">
+                <span class="material-icons arrow">arrow_forward</span>
+                  <span className="gotocart">Go to Cart</span>
+                <span class="material-icons arrow">arrow_back</span>
+              </div>
+              <div className="container1 flex">
                 {
                   doughnut.map(item=>
                     <div className="doughcon">
@@ -23,14 +33,17 @@ const Home = ()=> {
                       <Link to={'/' + item.name}><img src={item.img} className="doughimg"/></Link>
                     </div>
                     <div className="iconcon flex">
-                      <div className="icon">
-                        <span class="material-icons icon" id={item.id}>add_shopping_cart</span>
-                      </div>
                       <Link to={'/' + item.name}>
                         <span className="doughname">
                           {item.name}
                         </span>
                       </Link>
+                    </div>
+                    <div className="cartNum flex">
+                      <button className="cartchange left" onClick={e=> dispatch(decrementInCart(e.target.value))} 
+                        value={item.id}>-</button>
+                      <div  className="cartsum">{item.inCartSum}</div>
+                      <button className="cartchange" onClick={e=> dispatch(incrementInCart(e.target.value))} value={item.id}>+</button>
                     </div>
                   </div>
                   )
@@ -42,4 +55,4 @@ const Home = ()=> {
     )
 }
 
-export default Home
+export default Home;
