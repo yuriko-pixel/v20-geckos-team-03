@@ -1,4 +1,3 @@
-
 export const incrementInCart = id => (
   {
     type: 'increment',

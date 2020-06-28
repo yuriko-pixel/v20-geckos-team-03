@@ -37,6 +37,10 @@ span {
   padding-left: 100px;
 }
 
+.contents {
+  display: contents;
+}
+
 .gotocart {
   font-size: 25px;
 }
@@ -106,7 +110,6 @@ span {
 .cartchange {
   margin: 0;
   padding: 0 20px;
-  width: 15px;
   font-size: 30px;
   background: #e6e6fa;
   border: gray;

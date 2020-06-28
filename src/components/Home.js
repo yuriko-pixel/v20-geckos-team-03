@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from './Layout'
 import {Link} from 'react-router-dom'
 import homestyle from '../styles/homestyle.css'
-import {incrementInCart, decrementInCart }from '../redux/action'
+import {incrementInCart, decrementInCart }from '../redux/old/action'
 import { useDispatch, useSelector } from "react-redux";
 
+const inCartSum = state => state.inCartSum;
 
-const item = state => state;
+let contentful = require('contentful')
+let client = contentful.createClient({
+  space: process.env.REACT_APP_ID,
+  accessToken: 'vxQrvgXfbVkOCxIgYfjQPlkl_Hzx6YKGm93kM-ktOuQ'
+});
 
 const Home = props => {
-  const doughnut = useSelector(item);
   const dispatch = useDispatch();
+  const [doughnuts, setDoughnuts] = useState();
+  const [isFetched, setFetched] = useState(false);
+  const cartSum = useSelector(inCartSum);
+
+  useEffect(()=> {
+    client.getEntries()
+    .then(response=> {setDoughnuts(
+      response.items.map(i=>{return {id: i.fields.id, name: i.fields.title, img: i.fields.img.fields.file.url}}));setFetched(true);})
+    .catch(error => {})
+  });
 
     return (
       <Layout>
@@ -26,28 +40,28 @@ const Home = props => {
                 <span class="material-icons arrow">arrow_back</span>
               </div>
               <div className="container1 flex">
-                {
-                  doughnut.map(item=>
-                    <div className="doughcon">
-                      <div className="imgcon">
-                      <Link to={'/' + item.name}><img src={item.img} className="doughimg"/></Link>
+                {!isFetched?<div>Loading</div>:
+                  <div className="contents">
+                  {
+                    doughnuts.map(item=>
+                      <div className="doughcon">
+                        <div className="imgcon">
+                        <Link to={'/' + item.name}><img src={item.img} className="doughimg"/></Link>
+                      </div>
+                      <div className="iconcon flex">
+                        <Link to={'/' + item.name}>
+                          <span className="doughname">
+                            {item.name}
+                          </span>
+                        </Link>
+                      </div>
+                        <button className="cartchange" onClick={e=> dispatch(incrementInCart(item.id))}>Add to cart</button>
                     </div>
-                    <div className="iconcon flex">
-                      <Link to={'/' + item.name}>
-                        <span className="doughname">
-                          {item.name}
-                        </span>
-                      </Link>
-                    </div>
-                    <div className="cartNum flex">
-                      <button className="cartchange left" onClick={e=> dispatch(decrementInCart(e.target.value))} 
-                        value={item.id}>-</button>
-                      <div  className="cartsum">{item.inCartSum}</div>
-                      <button className="cartchange" onClick={e=> dispatch(incrementInCart(e.target.value))} value={item.id}>+</button>
-                    </div>
-                  </div>
-                  )
-                }
+                    )
+                  }
+                
+                </div>
+                }      
               </div>
             </div>
         </div>
