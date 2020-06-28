@@ -8,6 +8,7 @@ function App() {
     <div className="App">
      <Router>
       <Route exact path='/' component={Home}/>
+      <Route exact path='/:name' component={Doughnut}/>
      </Router>
     </div>
   );
