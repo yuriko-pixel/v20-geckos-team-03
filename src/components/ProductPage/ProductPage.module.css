@@ -44,9 +44,6 @@
   font-size: 20px;
 }
 
-.Product_Button {
-}
-
 .Input {
   width: 50px;
   margin-right: 50px;
@@ -84,10 +81,21 @@
   margin-top: 5px;
 }
 
-.added_animation {
-  display: none;
+.add_btn {
+  position: relative;
 }
 
-.clicked {
+.added {
+  font-size: 20px;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
   display: block;
+  transform: translateY(-25px);
 }

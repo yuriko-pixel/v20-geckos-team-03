@@ -7,8 +7,13 @@ import { incrementInCart } from "../../redux/action";
 
 const ProductPage = (props) => {
   const [doughnutsLists, setDoughnutsLists] = useState(null);
+  const [activeClass, setActiveClass] = useState(false);
   const dispatch = useDispatch();
   const productID = parseInt(props.match.params.id);
+
+  let spanClass = activeClass
+    ? `${classes.added} ${classes.active}`
+    : `${classes.added}`;
 
   useEffect(() => {
     getData().then((response) => {
@@ -19,8 +24,11 @@ const ProductPage = (props) => {
   const addItemHandler = (e) => {
     e.preventDefault();
     const qty = parseInt(e.target.qty.value);
-    console.log(qty);
     dispatch(incrementInCart(productID, qty));
+    setActiveClass(true);
+    setTimeout(() => {
+      setActiveClass(false);
+    }, 1500);
   };
 
   const renderProduct = () => {
@@ -47,9 +55,13 @@ const ProductPage = (props) => {
                 name="qty"
                 type="number"
                 min="1"
+                defaultValue="1"
               />
-              <span>ADDED!</span>
-              <button className={classes.button}> ADD TO CART</button>
+
+              <button className={classes.add_btn}>
+                {" "}
+                <span className={spanClass}>ADDED!</span>ADD TO CART
+              </button>
             </form>
           </div>
         </div>
