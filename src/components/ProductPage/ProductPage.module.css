@@ -1,0 +1,93 @@
+.Product_page {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.Main {
+  margin: 30px 0;
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+.Product_img {
+  width: 50%;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+}
+
+.Product_img img {
+  width: 100%;
+}
+
+.Product_Description {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.Product_Description * {
+  text-align: start;
+}
+
+.Product_Title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Product_Price {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Product_Button {
+}
+
+.Input {
+  width: 50px;
+  margin-right: 50px;
+}
+
+.Others {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  padding: 20px 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+}
+
+.Others_Product {
+  width: 20%;
+  height: 150px;
+  margin: 0 10px;
+}
+
+.Others_Product img {
+  height: 50%;
+  display: block;
+  background-color: blanchedalmond;
+  margin-bottom: 5px;
+}
+
+.Others_Product p {
+  text-align: start;
+}
+.Others_Product :last-child {
+  margin-top: 5px;
+}
+
+.added_animation {
+  display: none;
+}
+
+.clicked {
+  display: block;
+}
