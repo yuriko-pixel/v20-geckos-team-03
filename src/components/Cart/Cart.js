@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../Layout";
+import StripeCheckout from "react-stripe-checkout";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./Cart.module.css";
 
@@ -53,7 +54,7 @@ const Cart = () => {
         </div>
         <div className={classes.total_price}>
           <p>TOTAL: {totalPrice} $</p>
-          <button>CHECK OUT </button>
+          <StripeCheckout stripeKey="pk_test_51H0mngCFTCnD9GkdfH2LGGUd99Km56HKV30iLRaWLMwORkyXXUUiBaMeGEnpI4DcdVhjEMugRrFzLzWNHxTYZkrk002z29Teih" />
         </div>
       </div>
     </Layout>
