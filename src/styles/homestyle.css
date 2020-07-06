@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+a:visited, a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.img {
+  background-image: url("../img/ohtilly-F9uaJFH_j7Q-unsplash.jpg");
+  background-size: 1200px 600px;
+  width: 1200px;
+  height: 600px;
+  border: 3px solid #e95464;
+}
+
+body {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+span {
+  color: #e95464;
+  font-size: 70px;
+  margin-top: 100px;
+}
+
+.container1 {
+  padding-left: 100px;
+}
+
+.contents {
+  display: contents;
+}
+
+.gotocart {
+  font-size: 25px;
+}
+
+.gotocartcon {
+  height: 50px;
+  margin:  0 auto;
+}
+
+span {
+  margin: 0;
+}
+
+.arrow {
+  padding-top: 5px;
+}
+
+.carttitle {
+  font-family: 'Sriracha', cursive;
+  background: #ff6347;
+  color: white;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.cartcontainer {
+  width: 1150px;
+  padding: 10px 0 0 60px;
+  background: #f6ae54;
+  border-radius: 15px;
+}
+
+.iconcon{
+  padding: 10px 0 0 80px;
+}
+
+.doughcon {
+  width: 280px;
+  height: 280px;
+  padding: 5px;
+  margin: 5px;
+  background: white;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.imgcon {
+  background: #f5f5f5;
+  height: 200px;
+  padding: 2px;
+}
+
+.doughimg {
+  width: 180px;
+  height: 180px;
+}
+
+.doughname {
+  font-size: 20px;
+}
+
+.cartNum {
+  margin: 0 auto;
+  color: #696969;
+}
+
+.cartchange {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 30px;
+  background: #e6e6fa;
+  border: gray;
+}
+
+.cartsum {
+  margin: 0;
+  width: 30px;
+  background: #f5f5f5;
+  border: 1px solid gray;
+  font-size: 30px;
+}
+
+.left {
+  margin-left: 85px;
+}
+
+button:hover {
+  cursor: pointer;
+}

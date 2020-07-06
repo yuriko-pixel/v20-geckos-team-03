@@ -1,0 +1,35 @@
+.item {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  color: black;
+  border: 1px solid rgb(219, 215, 215);
+  margin-top: 20px;
+}
+
+.item_img {
+  width: 20%;
+}
+
+.item_img img {
+  width: 100%;
+}
+
+.item_name {
+  font-size: 30px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+p {
+  margin: 0;
+}
+
+.total_price {
+  margin-bottom: 10px;
+}
