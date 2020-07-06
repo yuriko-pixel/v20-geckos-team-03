@@ -47,7 +47,7 @@ const Home = (props) => {
         <div className="cartcontainer">
           <div className="gotocartcon">
             <span class="material-icons arrow">arrow_forward</span>
-            <span className="gotocart">Go to Cart</span>
+            <Link to="/Cart"><span className="gotocart">Go to Cart</span></Link>
             <span class="material-icons arrow">arrow_back</span>
           </div>
           <div className="container1 flex">
