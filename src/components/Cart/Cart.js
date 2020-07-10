@@ -90,7 +90,9 @@ const Cart = ({ stripe }) => {
         </div>
         <form onSubmit={submit}>
           <h4>Would you like to complete the purchase?</h4>
-          <CardElement />
+          <div className={classes.card_element}>
+            <CardElement />
+          </div>
           <button type="submit" disabled={status === "submitting"}>
             {status === "submitting" ? "Submitting" : "Submit Order"}
           </button>

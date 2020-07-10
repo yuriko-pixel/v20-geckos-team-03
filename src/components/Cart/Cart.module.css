@@ -33,3 +33,11 @@ p {
 .total_price {
   margin-bottom: 10px;
 }
+
+.card_element {
+  width: 30%;
+  margin: 20px auto;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 30px;
+}
