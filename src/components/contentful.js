@@ -2,7 +2,7 @@ export const getData = () => {
   const contentful = require("contentful");
   const client = contentful.createClient({
     space: process.env.REACT_APP_ID,
-    accessToken: "vxQrvgXfbVkOCxIgYfjQPlkl_Hzx6YKGm93kM-ktOuQ",
+    accessToken: process.env.REACT_APP_CONTENT,
   });
 
   let donutData;
