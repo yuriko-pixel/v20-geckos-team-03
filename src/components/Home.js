@@ -7,35 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 const inCartSum = (state) => state.inCartSum;
 
-// let contentful = require("contentful");
-// let client = contentful.createClient({
-//   space: process.env.REACT_APP_ID,
-//   accessToken: "vxQrvgXfbVkOCxIgYfjQPlkl_Hzx6YKGm93kM-ktOuQ",
-// });
-
 const Home = (props) => {
   const dispatch = useDispatch();
   const [isFetched, setFetched] = useState(false);
   const cartSum = useSelector(inCartSum);
 
-  // useEffect(() => {
-  //   client
-  //     .getEntries()
-  //     .then((response) => {
-  //       setDoughnuts(
-  //         response.items.map(({ fields }) => {
-  //           return {
-  //             id: fields.id,
-  //             name: fields.title,
-  //             img: fields.img.fields.file.url,
-  //             price: fields.price,
-  //           };
-  //         })
-  //       );
-  //       setFetched(true);
-  //     })
-  //     .catch((error) => {});
-  // });
 
   return (
     <Layout>
